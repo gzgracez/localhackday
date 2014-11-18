@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
-
+    <link href="css/thumbnail-gallery.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -28,32 +28,51 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <style>
-            .strokeme
-            {
-                color: white;
-                text-shadow:
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000;  
+    <style>
+        .strokeme {
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        .typeform-share {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+            height: 105px;
+            width: 106px;
+        }
+    </style>
+    <script>
+        (function() {
+            var qs, js, q, s, d = document,
+                gi = d.getElementById,
+                ce = d.createElement,
+                gt = d.getElementsByTagName,
+                id = 'typef_orm',
+                b = 'https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+            if (!gi.call(d, id)) {
+                js = ce.call(d, 'script');
+                js.id = id;
+                js.src = b + 'share.js';
+                q = gt.call(d, 'script')[0];
+                q.parentNode.insertBefore(js, q)
             }
-            .typeform-share {
-                padding: 10px 16px;
-                font-size: 18px;
-                line-height: 1.33;
-                border-radius: 6px;
-                height: 105px;
-                width: 106px;
+            id = id + '_';
+            if (!gi.call(d, id)) {
+                qs = ce.call(d, 'link');
+                qs.rel = 'stylesheet';
+                qs.id = id;
+                qs.href = b + 'share-button.css';
+                s = gt.call(d, 'head')[0];
+                s.appendChild(qs, s)
             }
+        })()
+    </script>
+</head>
 
-        </style>
-        <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
-    </head>
+<body>
 
-    <body>
-
-<!--         <div class="container">
+    <!--         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -80,235 +99,229 @@
                 </ul>
             </div> 
         </div> -->
-        <!-- /.container -->
-<!--     </nav>
+    <!-- /.container -->
+    <!--     </nav>
 -->
-<!-- Header -->
-<div class="intro-header">
+    <!-- Header -->
+    <div class="intro-header">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-message">
-                    <h1 class="strokeme">YH:Local Hack Day</h1>
-                    <h5>December 6th 2014</h5>
-                    <h3>Hosted by <a href="http://younghackers.us">The Young Hackers</a></h3>
-                    <hr class="intro-divider">
-                    <ul class="list-inline intro-social-buttons">
-                        <li>
-                            <a class="btn btn-default btn-lg" href="https://younghackers.typeform.com/to/un6ui7" style="height:45px;width:106px;padding:10px16px;line-height:1.33;border-radius:6px;border-top:300px" data-mode="1" target="_blank"><span class="network-name">Register</span></a>
-                            <!-- <a href="http://www.younghackers.us/" class="btn btn-default btn-lg"><span class="network-name">Register</span></a> -->
-                        </li>
-                        <li>
-                            <a href="mailto:team@younghackers.us" class="btn btn-default btn-lg"><span class="network-name">Mentor</span></a>
-                        </li>
-                        <li>
-                            <a href="mailto:team@younghackers.us" class="btn btn-default btn-lg"><span class="network-name">Sponsor</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.intro-header -->
-
-<!-- Page Content -->
-<a name="about"></a>
-<div class="content-section-a">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">About The Local Hack Day Series</h2>
-                <p class="lead">Brought to you by <a target="_blank" href="http://younghackers.us/">The Young Hackers</a> and <a target="_blank" href="http://localhackday.mlh.io/">Major League Hacking</a></p>
-                <p class="leadnobold">"A hack day is about celebrating the hacker community at your school by coming together and building awesome projects together! During the hack day your community will come together to create and build community together over 12 hours. MLH will be providing awesome programming and swag all day long to help celebrate all the Hacker Community everywhere." - MLH</p>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <a class="thumbnail" href="img/info.jpg">
-                    <img class="img-responsive" src="img/handsUpEdited.jpg" alt="">
-                </a>
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-
-<a name="details"></a>
-<div class="content-section-b">
-
-    <div class="container">
-
-        <div class="row">
-            <div>
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Details:</h2>
-            </div>
-            <div class="span9">
-            <section>
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
-                        <p class="lead">Who participates in Local Hack Day?</p>
-                        <p class="nlead">Only the coolest and most awesome students ever, especially those students in high school. Don't worry, we love you too college students. But seroiously, anyone from all walks of life are welcome. /p>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
-                        <p class="lead">When is Local Hack Day?</p>
-                        <p class="nlead">Local Hack Day kicks off 9:00 am EST, December 6th, and lasts until 9:00 pm EST. After closing ceremonies, we'll have an optional connect and eat so you can get to know you'r fellow hackers further.</p>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
-                        <p class="lead">Where is Local Hack Day?</p>
-                        <p class="nlead">The Location will be at an awesome tech space in midtown manhatten, the heart of New York City. Its currently TBD because we're finalizing details.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div>
-                <h1></h1>
-                <div class="clearfix"></div>
-        </div>
-        <section>
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
-                    <p class="lead">What can I build?</p>
-                    <p class="nlead">You can build anything you want; from the iron man suit idea in the back of your head - to the computer science homework that was due days ago, you can build anything you want. Make sure to bring any hardware, laptops or smart-phones that you want to utilize during the event. We'll try really hard to get you guys access to some crazy cool hardware</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
-                    <p class="lead">What if I've never been to a hackathon before?</p>
-                    <p class="nlead">A hack day is the perfect chance for you to experience what a Hackathon is like. Regardless of experience level, all are welcome to come learn, celebrate and build.</p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
-                    <p class="lead">Do I need a team?</p>
-                    <p class="nlead">Each Local Hack Day will start with a team formation workshop to help you find a team if you don't have one. You don't need to have a team to participate though.</p>
-                </div>
-            </div>
-            <section>
-            </div>
-        </div>
-    </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-
-<a name="register"></a>
-<div class="content-section-a">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading"><font color="red">Register!</font></h2>
-                <p class="lead">Click here to register to participate in this 12-hour high school hackathon!</p>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="img/yhlogo.png" width=300px alt="">
-            </div>
-            <ul class="list-inline intro-social-buttons">
-                <li>
-                    <a href="https://younghackers.typeform.com/to/un6ui7" class="btn btn-default btn-lg"><span class="network-name"><font color="red">Register</font></span></a>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-<a name="sponsors"></a>
-<div class="content-section-b">
-
-    <div class="container">
-
-        <div class="row">
-            <div>
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Sponsors:</h2>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a class="thumbnail">
-                        <img class="img-responsive" src="img/mlh.png" href="http://mlh.io/" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a class="thumbnail">
-                        <img class="img-responsive" src="img/whisk.png" href="http://whisk.me/" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a class="thumbnail">
-                        <img class="img-responsive" src="img/twilio.png" href="https://www.twilio.com/" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a class="thumbnail">
-                        <img class="img-responsive" src="img/asc.png" href="http://www.allstarcode.org/" alt="">
-                    </a>
-                </div>
-        </div>
-        <div class="row">
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a class="thumbnail">
-                        <img class="img-responsive" src="img/alleynyc.png" href="http://alleynyc.com" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <a class="thumbnail">
-                        <img class="img-responsive" src="img/Google.png" href="http://google.com" alt="">
-                    </a>
-                </div>
-                <!--<div class="col-lg-3 col-md-4 col-xs-6 thumb">-->
-                <!--    <a class="thumbnail">-->
-                <!--        <img class="img-responsive" src="img/mainstreet.png" href="http://mainstreetplatform.com" alt="">-->
-                <!--    </a>-->
-                <!--</div>-->
-                <!--<div class="col-lg-3 col-md-4 col-xs-6 thumb">-->
-                <!--    <a class="thumbnail">-->
-                <!--        <img class="img-responsive" src="yahoo.png" href="http://yahoo.org" alt="">-->
-                    <!--</a>-->
-                <!--</div>-->
-        </div>
-            
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p> All hack days follow the MLH Code of Conduct to ensure a welcoming environment for hackers and a publicly available reporting system for incidents.</p>
-                        <p>Made with love &#9829 by TheYoungHackers Squad</p>
-                        <p class="copyright text-muted small" style="backgrounf-position:center;">Copyright &copy; The Young Hackers 2014. All Rights Reserved</p>
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1 class="strokeme">YH:Local Hack Day</h1>
+                        <h5>December 6th 2014</h5>
+                        <h3>Hosted by <a href="http://younghackers.us">The Young Hackers</a></h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a class="btn btn-default btn-lg" href="https://younghackers.typeform.com/to/un6ui7" style="height:45px;width:106px;padding:10px16px;line-height:1.33;border-radius:6px;border-top:300px" data-mode="1" target="_blank"><span class="network-name">Register</span></a>
+                                <!-- <a href="http://www.younghackers.us/" class="btn btn-default btn-lg"><span class="network-name">Register</span></a> -->
+                            </li>
+                            <li>
+                                <a href="mailto:team@younghackers.us" class="btn btn-default btn-lg"><span class="network-name">Mentor</span></a>
+                            </li>
+                            <li>
+                                <a href="mailto:team@younghackers.us" class="btn btn-default btn-lg"><span class="network-name">Sponsor</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
 
-        <!-- jQuery Version 1.11.0 -->
-        <script src="js/jquery-1.11.0.js"></script>
+        </div>
+        <!-- /.container -->
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+    <a name="about"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">About The Local Hack Day Series</h2>
+                    <p class="lead">Brought to you by <a target="_blank" href="http://younghackers.us/">The Young Hackers</a> and <a target="_blank" href="http://localhackday.mlh.io/">Major League Hacking</a>
+                    </p>
+                    <p class="leadnobold">"A hack day is about celebrating the hacker community at your school by coming together and building awesome projects together! During the hack day your community will come together to create and build community together over 12 hours. MLH will be providing awesome programming and swag all day long to help celebrate all the Hacker Community everywhere." - MLH</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <a class="thumbnail" href="img/handsUpEdited.jpg">
+                        <img class="img-responsive" src="img/handsUpEdited.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a name="details"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div>
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Details:</h2>
+                </div>
+                <div class="span9">
+                    <section>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
+                                <p class="lead">Who participates in Local Hack Day?</p>
+                                <p class="nlead">Only the coolest and most awesome students ever, especially those students in high school. Don't worry, we love you too college students. But seroiously, anyone from all walks of life are welcome. /p>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
+                                <p class="lead">When is Local Hack Day?</p>
+                                <p class="nlead">Local Hack Day kicks off 9:00 am EST, December 6th, and lasts until 9:00 pm EST. After closing ceremonies, we'll have an optional connect and eat so you can get to know you'r fellow hackers further.</p>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
+                                <p class="lead">Where is Local Hack Day?</p>
+                                <p class="nlead">The Location will be at an awesome tech space in midtown manhatten, the heart of New York City. Its currently TBD because we're finalizing details.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div>
+                    <h1></h1>
+                    <div class="clearfix"></div>
+                </div>
+                <section>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
+                            <p class="lead">What can I build?</p>
+                            <p class="nlead">You can build anything you want; from the iron man suit idea in the back of your head - to the computer science homework that was due days ago, you can build anything you want. Make sure to bring any hardware, laptops or smart-phones that you want to utilize during the event. We'll try really hard to get you guys access to some crazy cool hardware</p>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
+                            <p class="lead">What if I've never been to a hackathon before?</p>
+                            <p class="nlead">A hack day is the perfect chance for you to experience what a Hackathon is like. Regardless of experience level, all are welcome to come learn, celebrate and build.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb span4">
+                            <p class="lead">Do I need a team?</p>
+                            <p class="nlead">Each Local Hack Day will start with a team formation workshop to help you find a team if you don't have one. You don't need to have a team to participate though.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
 
 
-    </body>
+    <a name="register"></a>
+    <div class="content-section-a">
 
-    </html>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><font color="red">Register!</font></h2>
+                    <p class="lead">Click here to register to participate in this 12-hour high school hackathon!</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/yhlogo.png" width=300px alt="">
+                </div>
+                <ul class="list-inline intro-social-buttons">
+                    <li>
+                        <a href="https://younghackers.typeform.com/to/un6ui7" class="btn btn-default btn-lg"><span class="network-name"><font color="red">Register</font></span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    <a name="sponsors"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div>
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Sponsors:</h2>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="http://mlh.io/">
+                            <img class="img-responsive" src="img/mlh.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="http://whisk.me/">
+                            <img class="img-responsive" src="img/whisk.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="https://www.twilio.com/">
+                            <img class="img-responsive" src="img/twilio.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="http://www.allstarcode.org/">
+                            <img class="img-responsive" src="img/asc.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="http://alleynyc.com">
+                            <img class="img-responsive" src="img/alleynyc.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="http://google.com">
+                            <img class="img-responsive" src="img/Google.png" alt="">
+                        </a>
+                    </div>
+                    <!--<div class="col-lg-3 col-md-4 col-xs-6 thumb">-->
+                    <!--    <a class="thumbnail">-->
+                    <!--        <img class="img-responsive" src="img/mainstreet.png" href="http://mainstreetplatform.com" alt="">-->
+                    <!--    </a>-->
+                    <!--</div>-->
+                    <!--<div class="col-lg-3 col-md-4 col-xs-6 thumb">-->
+                    <!--    <a class="thumbnail">-->
+                    <!--        <img class="img-responsive" src="yahoo.png" href="http://yahoo.org" alt="">-->
+                    <!--</a>-->
+                    <!--</div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p> All hack days follow the MLH Code of Conduct to ensure a welcoming environment for hackers and a publicly available reporting system for incidents.</p>
+                    <p>Made with love &#9829 by TheYoungHackers Squad</p>
+                    <p class="copyright text-muted small" style="backgrounf-position:center;">Copyright &copy; The Young Hackers 2014. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
